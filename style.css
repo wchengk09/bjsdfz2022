@@ -2,6 +2,7 @@ body{
     margin: 0;
 }
 div#title-bar{
+    height: auto;
     padding: 7px;
     padding-left: 20px;
     background-color: rgb(248,249,250);
@@ -14,11 +15,11 @@ h1#title-h1{
     display: inline-block;
 }
 
-a#text{
+a.a-text{
     text-decoration: none;
     color: black;
 }
 
 a#title-login{
-    
+    font-size: 24px;
 }

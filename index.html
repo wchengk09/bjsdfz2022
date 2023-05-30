@@ -13,5 +13,16 @@
 		<h1 id="title-h1">北京师大附中2022级学生自治会</h1>
 		<span id="title-right"><a id="title-login" class="a-text" href="/login">登录</a></span>
 	</div>
+	<img style="width: 100vw" id="img">
+	<script>
+		const Imgs = 3;
+		var curImg = Imgs - 1;
+		(function switchImage(){
+			curImg ++;
+			curImg %= Imgs;
+			getObj('img').src = '//kevinwu521.gitee.io/res/fz/' + curImg + '.jpg';
+			setTimeout(switchImage,2236);
+		})();
+	</script>
 </body>
 </html>
