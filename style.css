@@ -20,6 +20,6 @@ a.a-text{
     color: black;
 }
 
-a#title-login{
+a.title-login{
     font-size: 24px;
 }
