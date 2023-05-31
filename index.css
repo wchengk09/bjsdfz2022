@@ -1,6 +1,10 @@
 body{
     margin: 0;
 }
+
+div#title-indexs{
+    background-color: rgb(238,244,247);
+}
 div#title-bar{
     height: auto;
     padding: 7px;
@@ -23,8 +27,6 @@ a.a-text{
 div.index-block-out{
     display: inline-block;
     vertical-align: top;
-    box-shadow: 3px 3px #aaa;
-    padding: 10px;
     border-radius: 10px;
     padding: 10px;
 }
