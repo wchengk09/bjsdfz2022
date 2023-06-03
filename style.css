@@ -1,3 +1,19 @@
 a.title-login{
     font-size: 24px;
 }
+
+.underline{
+    border-bottom: 4px solid #17a2b8;
+}
+
+.ft24{
+    font-size: 24px;
+}
+
+.point{
+    cursor: pointer;
+}
+
+.black{
+    color: #000;
+}
