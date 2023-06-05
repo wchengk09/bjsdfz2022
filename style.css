@@ -20,5 +20,15 @@ a.title-login{
 
 .bl-hormid{
     margin-left: auto;
-    margin-
+    margin-right: auto;
+}
+
+.inl{
+    display: inline-block;
+    vertical-align: top;
+}
+
+a.a-text{
+    text-decoration: none;
+    color: black;
 }

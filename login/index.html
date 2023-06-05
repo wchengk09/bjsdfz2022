@@ -9,17 +9,33 @@
 	<link rel="stylesheet" type="text/css" href="/index.css">
 	<script src="/common.js"></script>
 	<script defer src="index.js"></script>
+	<style>
+		.input{
+			width: calc(100% - 45px);
+			height: 16px;
+			font-size: 16px;
+			padding: 6px;
+		}
+	</style>
 </head>
 <body>
 	<div id="title-bar">
-		<div id="title-ico"><h1>北京师大附中2022级学生自治会</h1></div>
-		<span id="title-right"><a class="a-text title-login" href="/">首页</a>&emsp;&emsp;<a class="a-text title-login" href="/login">登录</a></span>
+		<img src="//kevinwu521.gitee.io/res/zizhihui.jpeg" id="title-ico-img" align="top"><div id="title-ico"><h1 id="title-h1">北京师大附中2022学生自治会&emsp;&emsp;</h1></div>
+		<span id="title-right"><a class="a-text title-login" href="/login">登录</a></span>
 	</div>
 	<br>
-	
-	<h6>账&emsp;号</h6>
-	<input width="200px">
-	<br>
+	<div style="text-align: center; min-height: 100vh; background: url('//kevinwu521.gitee.io/res/fz/2.jpg'); background-size: 100% 100%;">
+		<br><br>
+		<div class="inl" style="text-align: left; padding: 20px; width: min(100vw,800px); background-color: #fff;">
+			<h2>用户注册</h2>
+			<p><a href="/" class="a-text">返回首页</a></p>
+			<p>用户名</p>
+			<input class="input" placeholder="请输入用户名(必填)">
+			<p>姓&emsp;名</p>
+			<input class="input" placeholder="请输入姓名(必填)">
+			<p>班&emsp;级</p>
+		</div>
+	</div>
 	<div id="bottom-bar">
 		<h3>友情链接</h3>
 		<a href="http://bjsdfz5ban.top" class="black">5班官网</a>
