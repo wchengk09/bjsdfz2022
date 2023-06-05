@@ -32,3 +32,7 @@ a.a-text{
     text-decoration: none;
     color: black;
 }
+
+.nobold{
+    font-weight: normal;
+}
