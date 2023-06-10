@@ -57,9 +57,9 @@ div#functions{
     display: none;
     position: absolute;
     top: 10px;
-    left: 580px;
-    right: 120px;
-    justify-content: space-between;
+    left: 560px;
+    /*right: 400px;*/
+    justify-content: space-around;
 }
 div#functions-content{
     z-index: 1;
