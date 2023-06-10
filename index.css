@@ -62,15 +62,15 @@ div#functions{
     justify-content: space-between;
 }
 div#functions-content{
+    z-index: 1;
+    border-radius: 10px;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
+    right: 0px;
+    top: 50px;
     display: none;
     background-color: #ffffff;
 }
 .func-content{
-    background-color: rgb(236,236,236);
     margin: 10px;
 }
 
@@ -83,4 +83,15 @@ div#functions-content{
     top: 10px;
     right: 10px;
     */
+}
+
+#half-dark{
+    z-index: 0;
+    background-color: rgba(0,0,0,70%);
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

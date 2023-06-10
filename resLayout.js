@@ -28,8 +28,16 @@ window.addEventListener('resize',resLayout);
 window.addEventListener('load',resLayout);
 
 function showContent(){
+    getObj('half-dark').style.display = 'block';
     document.getElementById("functions-content").style.display="inline-block";
 }
 function hideContent(){
+    getObj('half-dark').style.display = 'none';
     document.getElementById("functions-content").style.display="none";
+}
+
+function changeContent(){
+    if (getObj('functions-content').style.display === 'inline-block')
+        hideContent();
+    else showContent();
 }
