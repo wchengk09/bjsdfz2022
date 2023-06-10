@@ -3,16 +3,33 @@ function resLayout(){
         || document.documentElement.clientWidth
         || document.body.clientWidth;
     let func=document.getElementById("functions");
-    let h1 = document.getElementById('title-h1');
-    if(w<=850){
+    var h1 = document.getElementById('title-h1');
+    var img = getObj('title-ico-img');
+    var menu = getObj('title-menu');
+    var login = getObj('login-a');
+    if(w<=910){
         func.style.display="none";
-        h1.style.display = 'none';
+        menu.style.display = 'inline-block';
+        login.style.display = 'none';
     }
     else{
         func.style.display="inline-flex";
+        menu.style.display = 'none';
+        login.style.display = 'inline-block';
+    }
+    if (w <= 595){
         h1.style.display = 'none';
+    }else{
+        h1.style.display = 'inline-block';
     }
 }
 
 window.addEventListener('resize',resLayout);
 window.addEventListener('load',resLayout);
+
+function showContent(){
+    document.getElementById("functions-content").style.display="inline-block";
+}
+function hideContent(){
+    document.getElementById("functions-content").style.display="none";
+}

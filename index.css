@@ -6,6 +6,7 @@ div#title-indexs{
     background-color: rgb(238,244,247);
 }
 div#title-bar{
+    height: 85.875px;
     padding: 7px;
     background-color: rgb(236,236,236);
 }
@@ -53,14 +54,33 @@ button.blue{
 }
 
 div#functions{
-    display: flex;
+    display: none;
     position: absolute;
     top: 10px;
-    justify-content: space-around
+    left: 580px;
+    right: 120px;
+    justify-content: space-between;
+}
+div#functions-content{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+    background-color: #ffffff;
+}
+.func-content{
+    background-color: rgb(236,236,236);
+    margin: 10px;
 }
 
 
-#title-menu-bar{
+#title-menu{
     display: none;
-    height: 75px;
+    height: 50px;
+    /*
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    */
 }
