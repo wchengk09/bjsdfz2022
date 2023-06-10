@@ -7,24 +7,33 @@
     <title>404——北京师大附中2022级学生自治会</title>
 	<link rel="stylesheet" type="text/css" href="/index.css">
 	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script src="/resLayout.js"></script>
 	<script src="/common.js"></script>
 </head>
 <body>
+	<div id="functions-content">
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/'">年级简介</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/news'">年级新闻</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/forum'">论坛</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/tools'">小工具</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/tools'">注册/登录</h2>
+	</div>
+	<div id="half-dark" onclick="hideContent()"></div>
 	<div id="title-bar">
-		<img src="//kevinwu521.gitee.io/res/zizhihui.jpeg" id="title-ico-img" align="top"><div id="title-ico"><h1 id="title-h1">北京师大附中2022学生自治会&emsp;&emsp;</h1></div>
+		<img src="//kevinwu521.gitee.io/res/zizhihui.jpeg" id="title-ico-img" align="top">
+		<div id="title-ico"><h1 id="title-h1">北京师大附中2022学生自治会&emsp;&emsp;</h1></div>
+		<div id="functions">
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/'">年级简介</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/news'">年级新闻</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/forum'">论坛</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/tools'">小工具</h2>
+		</div>
 		<span id="title-right">
 			<a class="a-text title-login" href="/login" id="login-a">注册/登录</a>
 			<img class="point" src="//kevinwu521.gitee.io/res/menu.png" id="title-menu" onclick="changeContent();">
 		</span>
 	</div>
-	<div>
-		&emsp;<span class="ft24 point" onclick="location.href = '/'">年级简介</span>
-		&emsp;<span class="ft24 point" onclick="location.href = '/news'">年级新闻</span>
-		&emsp;<span class="ft24 point" onclick="location.href = '/forum'">论坛</span>
-		&emsp;<span class="ft24 point" onclick="location.href = '/tools'">小工具</span>
-	</div>
 	<img style="width: 100vw" src="//kevinwu521.gitee.io/res/fz/404.jpg">
-	<br>
 	<div id="bottom-bar">
 		<h3>友情链接</h3>
 		<a href="http://bjsdfz5ban.top" class="black">5班官网</a>
