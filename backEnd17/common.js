@@ -9,7 +9,7 @@ exports.querySync = function(sql){
 
 exports.getUserId = function(sessid){
     return new Promise(function(resolve,reject){
-        conn.query('SELECT * FROM sess_users WHERE sessid=',function(err,res){
+        conn.query('SELECT * FROM sess_users WHERE sessid=' + sessid,function(err,res){
             if (err)reject(err);
             resolve(res[0].id);
         })
