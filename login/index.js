@@ -1,5 +1,3 @@
-const { query } = require("../backEnd/MySQLCURD");
-
 function login(){
     var username = getObj('username').value;
     var password = getObj('password').value;
