@@ -4,8 +4,8 @@ function login(){
     var ajax = new XMLHttpRequest();
     ajax.onload = function(){
         alert(ajax.responseText);
-        if (ajax.responseText === '登录成功！')
-            location.href = '/';
+        /*if (ajax.responseText === '登录成功！')
+            location.href = '/';*/
     }
     ajax.open('POST',getIP(18667));
     ajax.send(queryString({
