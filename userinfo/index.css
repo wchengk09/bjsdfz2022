@@ -1,0 +1,11 @@
+#out{
+    padding: 50px 0px;
+    text-align: center;
+}
+
+input{
+    width: calc(min(100vw,800px) - 20px);
+    height: 20px;
+    padding: 6px;
+    font-size: 6px;
+}

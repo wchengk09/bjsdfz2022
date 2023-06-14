@@ -36,3 +36,13 @@ a.a-text{
 .nobold{
     font-weight: normal;
 }
+
+.back-fz0{
+    background: url('//kevinwu521.gitee.io/res/fz/0.jpg');
+    background-size: 100% 100%;
+}
+
+.back-fz2{
+    background: url('//kevinwu521.gitee.io/res/fz/2.jpg');
+    background-size: 100% 100%;
+}

@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/style.css">
 	<link rel="stylesheet" type="text/css" href="/index.css">
 	<script src="/common.js"></script>
+    <script src="/init.js"></script>
 	<script src="/resLayout.js"></script>
 	<script defer src="index.js"></script>
 	<style>
@@ -47,24 +48,26 @@
 			<h2 class="inl point nobold" onclick="location.href = '/login'">用户登录</h2>&emsp;
 			<h2 class="inl underline point" onclick="location.href = '/signup'">用户注册</h2>&emsp;
 			<p>用户名</p>
-			<input class="input" placeholder="请输入用户名(必填)">
+			<input id="username" class="input" placeholder="请输入用户名(必填)">
 			<p>密&emsp;码</p>
-			<input class="input" type="password" placeholder="请输入密码(必填)">
+			<input id="password" class="input" type="password" placeholder="请输入密码(必填)">
+			<p>再次输入密码</p>
+			<input id="password2" class="input" type="password" placeholder="请再次输入密码">
 			<p>姓&emsp;名</p>
-			<input class="input" placeholder="请输入姓名(必填)">
+			<input id="name" class="input" placeholder="请输入姓名(必填)">
 			<p>班&emsp;级</p>
-			<input class="input" placeholder="请输入班级(外校生可不填)">
+			<input id="class" class="input" placeholder="请输入班级(外校生可不填)">
 			<p>入学年份</p>
-			<input class="input" placeholder="请输入入学年份(外校生可不填)">
+			<input id="year" class="input" placeholder="请输入入学年份(外校生可不填)">
 			<p>7位学号</p>
-			<input class="input" placeholder="请输入7位数的学号(外校生可不填)">
+			<input id="code" class="input" placeholder="请输入7位数的学号(外校生可不填)">
 			<br><br>
-			<button type="button" class="blue">注&emsp;册</button>
+			<button type="button" class="blue" onclick="signUp()">注&emsp;册</button>
 		</div>
 	</div>
 	<div id="bottom-bar">
 		<h3>友情链接</h3>
-		<a href="http://bjsdfz5ban.top" class="black">5班官网</a>http://kevinwu521.gitee.io/res/fz/404.jpg
+		<a href="http://bjsdfz5ban.top" class="black">5班官网</a>
 		<a href="https://jiziqian.github.io/bjsdfz18ban" class="black">18班官网</a>
 	</div>
 </body>

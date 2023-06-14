@@ -105,3 +105,13 @@ function queryString(json) {
                 encodeURIComponent(json[key])
     })).join('&')
 }
+
+function QS2JSON(qs){
+    var obj = new Object();
+    var spl1 = qs.split('&');
+    for (var i = 0;i < spl1.length;i ++){
+        var spl2 = spl1[i].split('=');
+        obj[spl2[0]] = spl2[1];
+    }
+    return obj;
+}
