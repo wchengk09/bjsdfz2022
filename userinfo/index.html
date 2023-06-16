@@ -50,11 +50,23 @@
             <p>学&emsp;号</p>
             <input disabled id="code">
             <br><br>
-            <button type="button" class="blue" onclick="logOut()" id="bt-logout">退出登录</button>
             <button type="button" class="blue" onclick="modifyInfo()" id="bt-modify">修改信息</button>
             <button type="button" class="blue" onclick="postInfo()" id="bt-post" style="display: none">完成</button>
-            <button type="button" class="blue" onclick="location.href += ''" id="bt-cancel" style="display: none">取消</button>
-        </div>
+            <button type="button" class="blue" onclick="cancelModify()" id="bt-cancel" style="display: none">取消</button>
+        	<br><br><hr><br>
+			<h2>修改密码</h2>
+			<p>原密码</p>
+            <input type="password" id="password0">
+			<p>密码</p>
+            <input type="password" id="password">
+            <p>再次输入密码</p>
+            <input type="password" id="password2">
+			<br><br>
+			<button type="button" class="blue" onclick="modifyPassword()">修改密码</button>
+			<br><br><hr><br>
+			<h2>退出登录</h2>
+			<button type="button" class="blue" onclick="logOut()" id="bt-logout">退出登录</button>
+		</div>
     </div>
 	<div id="bottom-bar">
 		<h3>友情链接</h3>

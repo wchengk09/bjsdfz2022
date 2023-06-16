@@ -86,24 +86,9 @@ function isPhone() {
 function sessID(){
     return getCookie('WCKSESSID');
 }
-
-function cleanArray_JSONQS(actual) {
-    const newArray = []
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i]) {
-        newArray.push(actual[i])
-      }
-    }
-    return newArray
-  }
  
 function queryString(json) {
-    if (!json) return ''
-    return cleanArray_JSONQS(Object.keys(json).map(key => {
-        if (json[key] === undefined) return ''
-        return encodeURIComponent(key) + '=' +
-                encodeURIComponent(json[key])
-    })).join('&')
+    return Object.keys(params).map(key => key + "=" + params[key]).join("&");
 }
 
 function QS2JSON(qs){
