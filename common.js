@@ -88,7 +88,7 @@ function sessID(){
 }
  
 function queryString(json) {
-    return Object.keys(json).map(key => key + "=" + params[key]).join("&");
+    return Object.keys(json).map(key => key + "=" + json[key]).join("&");
 }
 
 function QS2JSON(qs){
