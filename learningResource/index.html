@@ -38,7 +38,13 @@
 			<img class="point" src="//kevinwu521.gitee.io/res/menu.png" id="title-menu" onclick="changeContent();">
 		</span>
 	</div>
-	<div id=""></div>
+	<div id="resource">
+		<div class="add">
+			<h3 style="display: inline;">上传文件</h3>
+			<input type="file" id="file" style="display: inline;">
+			<button onclick="addFile()" style="display: inline;">提交</button>
+		</div>
+	</div>
 	<div id="bottom-bar">
 		<h3>友情链接</h3>
 		<a href="http://bjsdfz5ban.top" class="black">5班官网</a>
@@ -47,7 +53,25 @@
     <script>
         var id=getParam("resId");
 		if(id!=""){
-
+			var server=getIP(18667);
+			var ajax=new XMLHttpRequest();
+			ajax.open('POST',server,true);
+			ajax.onload=function(){
+				var resource=document.getElementById("resource");
+				resource.innerHTML="<iframe src=\""+ajax.responseText+"\"></iframe>";
+			}
+			ajax.send("mode=resource&type=get&id="+id);
+			console.log(id);
+		}
+		function addFile(){
+			var file=document.getElementById("file").files[0];
+			var fr=new FileReader();
+			fr.readAsDataURL(file);
+			fr.onload=function(err){
+				var dtURL=fr.result;
+				console.log(dtURL);
+				window.open(dtURL);
+			}
 		}
     </script>
 </body>
