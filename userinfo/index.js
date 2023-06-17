@@ -90,16 +90,13 @@ function modifyPassword(){
     var ajax = new XMLHttpRequest();
     ajax.onload = function(){
         alert(ajax.responseText);
-        if (ajax.responseText === '修改信息成功！')
+        if (ajax.responseText === '修改密码成功！')
             location.href += '';
     }
-    ajax.open('POST',getIP(17668) + '/modifyuserinfo');
+    ajax.open('POST',getIP(17668) + '/modifypassword');
     ajax.send(queryString({
-        username: encodeURIComponent(getObj('username').value),
-        realname: encodeURIComponent(getObj('name').value),
-        class: encodeURIComponent(getObj('class').value),
-        enrollmentyear: encodeURIComponent(getObj('year').value),
-        stuCode: encodeURIComponent(getObj('code').value),
+        oldpassword: encodeURIComponent(getObj('password0').value),
+        newpassword: encodeURIComponent(getObj('password').value),
         sessionid: sessID()
     }));
 }
