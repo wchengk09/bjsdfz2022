@@ -5,7 +5,7 @@
 
 input{
     width: calc(min(100vw,800px) - 20px);
-    height: 24px;
+    height: 16px;
     padding: 6px;
-    font-size: 24px;
+    font-size: 16px;
 }
