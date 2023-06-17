@@ -2,8 +2,10 @@
 (function(){
     var ajax = new XMLHttpRequest();
     ajax.onload = function(){
-        if (ajax.responseText)
+        if (ajax.responseText){
             document.documentElement.innerHTML = document.documentElement.innerHTML.replaceAll('注册/登录','用户管理&nbsp;');
+            document.documentElement.innerHTML = document.documentElement.innerHTML.replaceAll('/login','/userinfo');
+        }
     }
     ajax.open('POST',getIP(17668) + '/userinfo');
     ajax.send(queryString({sessionid: sessID()}));

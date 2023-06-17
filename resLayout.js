@@ -7,7 +7,7 @@ function resLayout(){
     var img = getObj('title-ico-img');
     var menu = getObj('title-menu');
     var login = getObj('login-a');
-    if(w<=910){
+    if(w <= 950){
         func.style.display="none";
         menu.style.display = 'inline-block';
         login.style.display = 'none';
