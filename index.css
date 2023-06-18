@@ -95,3 +95,7 @@ div#functions-content{
     left: 0;
     right: 0;
 }
+
+#huge{
+    font-size: 48px;
+}
