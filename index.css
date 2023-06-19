@@ -37,6 +37,9 @@ div#bottom-bar{
     padding: 10px;
     background-color: rgb(236,236,236);
 }
+.bottom-bar-content{
+    display: inline-block;
+}
 
 #title-ico-img{
     width: 75px;
