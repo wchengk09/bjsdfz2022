@@ -40,13 +40,43 @@ a.a-text{
 .back-fz0{
     background: url('//kevinwu521.gitee.io/res/fz/0.jpg');
     background-size: 100% 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
 }
 
 .back-fz2{
     background: url('//kevinwu521.gitee.io/res/fz/2.jpg');
     background-size: 100% 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.shadow{
+    background-color: rgba(255,255,255,60%);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .txtblue{
     color: #17a2b8;
+}
+
+#cont-white{
+    position: relative;
+    margin: 24px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 24px;
 }
