@@ -100,3 +100,18 @@ function QS2JSON(qs){
     }
     return obj;
 }
+
+function logined(){
+    return new Promise(function(resolve){
+        var ajax = new XMLHttpRequest();
+        ajax.onload = function(){
+            if (ajax.responseText)resolve(true);
+            resolve(false);
+        }
+        ajax.onerror = function(){
+            resolve(false);
+        }
+        ajax.open('POST',getIP(17668) + '/userinfo');
+        ajax.send('sessionid=' + sessID());
+    })
+}

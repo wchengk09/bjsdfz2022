@@ -84,3 +84,12 @@ a.a-text{
 .blue{
     color: #17a2b8;
 }
+
+button{
+    cursor: pointer;
+}
+
+
+#main-content{
+    min-height: 100vh;
+}
