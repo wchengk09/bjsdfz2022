@@ -8,7 +8,10 @@ function getContent(spl1){
             resolve(spl2);
         }
         ajax.open('POST',IP + '/forum/content');
-        ajax.send('id=' + spl1);
+        ajax.send(queryString({
+            id: spl1,
+            sessionid: sessID()
+        }));
     })
 }
 
