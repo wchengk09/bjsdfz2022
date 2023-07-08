@@ -15,9 +15,9 @@
 
 #edit{
     margin: 24px 0px 0px 0px;
-    padding: 8px;
+    padding: 8px 8px 0 8px;
     border: 1px solid rgb(200,200,200);
-    min-height: 127px;
+    min-height: 180px;
 }
 
 #editContent{
@@ -31,6 +31,8 @@
 
 #content-div{
     margin: 10px 0px 0px 0px;
+    min-width: 160px;
+    position: relative;
 }
 #content{
     width: calc(100% - 12px);
@@ -42,9 +44,36 @@
     outline: none;
 }
 #content-count{
-    margin: 0px;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 0;
 }
+
+#content-bottom-cnt{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
 
 #preview-div{
     margin: 10px 0px 0px 0px;
+}
+
+#upload-file-button{
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid #bbb;
+    margin: 0px 0px 10px 0px;
+}
+
+#submit-button{
+    margin: 20px 0 0 0 ;
+}
+
+.upload-file-buttons{
+    margin: 0 4px 0 0;
 }

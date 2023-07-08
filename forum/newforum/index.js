@@ -1,12 +1,16 @@
+var base64=[];
+var sizesum=0;
+
 function txtCount(){
     var val = getObj('title').value.length;
     getObj('txt-count').innerHTML = val + '/256';
     getObj('title').value=getObj('title').value.slice(0,256);
-    if (val > 256)
+    if (val > 256){
         getObj('txt-count').style.color = 'red';
+        txtCount();
+    }
     else
-        getObj('txt-count').style.color = 'black'; 
-    setTimeout(txtCount,50);
+        getObj('txt-count').style.color = 'black';
 }
 txtCount();
 
@@ -14,11 +18,12 @@ function contentCount(){
     var val = getObj('content').value.length;
     getObj('content-count').innerHTML = val + '/4096';
     getObj('content').value=getObj('content').value.slice(0,4096);
-    if (val > 4096)
+    if (val > 4096){
         getObj('content-count').style.color = 'red';
+        contentCount();
+    }
     else
-        getObj('content-count').style.color = 'black'; 
-    setTimeout(contentCount,50);
+        getObj('content-count').style.color = 'black';
 }
 contentCount();
 
@@ -27,8 +32,7 @@ function addrows(){
     var rows = 0;
     for (var i = 0;i < val.length;i ++)
         if (val[i] == '\n')rows ++;
-    if (rows)console.log(rows);
-    getObj('content').rows = Math.min(rows,17) + 3;
+    getObj('content').rows = Math.max(Math.min(rows,20),6);
     setTimeout(addrows,50);
 }
 addrows();
@@ -72,4 +76,35 @@ function preview(){
         ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
     });
     hljs.highlightAll();
+}
+
+async function loadfile(){
+    var files=getObj('upload-file').files;
+    if(window.FileReader){
+        for(var i=0;i<files.length;i++){
+            var fr=new FileReader();
+            fr.readAsDataURL(files[i]);
+            await new Promise(function(res){
+                fr.onloadend=function(e){
+                    if(sizesum+files[i].size>1048576){
+                        alert("您上传的文件总大小已超过1MB，请停止上传");
+                    }
+                    else{
+                        base64[base64.length]=e.target.result;
+                        getObj('file-titles').innerHTML+='<button id=\"'+(base64.length-1)+'\" class=\"upload-file-buttons white-button\">'+files[i].name+'<i class="fa fa-times" onclick=\"delfile('+(base64.length-1)+')\"></i>'+'</button>';
+                    }
+                    res();
+                }
+            });
+        }
+        console.log(base64);
+    }
+    else{
+        alert('非常抱歉，您的浏览器不支持上传文件');
+    }
+}
+function delfile(id){
+    getObj(String(id)).style='display: none;';
+    getObj(String(id)).id='-1';
+    base64.splice(id,1);
 }
