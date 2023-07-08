@@ -33,6 +33,10 @@ a.a-text{
     color: black;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 .nobold{
     font-weight: normal;
 }

@@ -27,7 +27,7 @@ window.addEventListener('load',function(){
             getObj('forumList').innerHTML += 
             '<div class="forum-container">'
             + '<h2>' + decodeURIComponent(spl2[0]) + '</h2>'
-            + '<p>' + decodeURIComponent(spl2[1])
+            + decodeURIComponent(spl2[1])
             + '</div>';
         }
     }

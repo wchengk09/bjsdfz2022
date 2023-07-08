@@ -1,7 +1,50 @@
-input{
-    width: calc(100% - 12px);
-    margin: 24px 0px;
+#title{
+    display: inline;
+    width: calc(100% - 100px);
+    margin: 24px 0px 0px 0px;
     height: 24px;
     font-size: 12px;
     padding: 6px;
+}
+#txt-count{
+    display: inline;
+    position: absolute;
+    right: 10px;
+    padding: 10px 0px 0px 0px;
+}
+
+#edit{
+    margin: 24px 0px 0px 0px;
+    padding: 8px;
+    border: 1px solid rgb(200,200,200);
+    min-height: 127px;
+}
+
+#editContent{
+    display: inline;
+    cursor: pointer;
+}
+#previewContent{
+    display: inline;
+    cursor: pointer;
+}
+
+#content-div{
+    margin: 10px 0px 0px 0px;
+}
+#content{
+    width: calc(100% - 12px);
+    margin: 10px 0px;
+    font-size: 12px;
+    padding: 6px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+#content-count{
+    margin: 0px;
+}
+
+#preview-div{
+    margin: 10px 0px 0px 0px;
 }

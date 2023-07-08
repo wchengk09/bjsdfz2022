@@ -12,12 +12,18 @@
     <script src="/init.js"></script>
 	<script defer src="index.js"></script>
 	<script src="/resLayout.js"></script>
+	<script src="md/showdown/showdown.min.js"></script>
+	<link rel="stylesheet" href="md/KaTeX/katex.css" integrity="sha384-ko6T2DjISesD0S+wOIeHKMyKsHvWpdQ1s/aiaQMbL+TIXx3jg6uyf9hlv3WWfwYv" crossorigin="anonymous">
+	<script defer="" src="md/KaTeX/katex.js" integrity="sha384-tsPOhveNsi36uhglzMBNOAA2xd7LlEqQuQHFKi4DwP+6UKrrLGub1MD77Zx18F8e" crossorigin="anonymous"></script>
+	<script defer="" src="md/KaTeX/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<link rel="stylesheet" href="md/highlight/default.min.css">
+	<script src="md/highlight/highlight.min.js"></script>
 </head>
 <body>
 	<div id="functions-content">
-		<h2 class="underline ft24 point func-content" onclick="location.href = '/'">年级简介</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/'">年级简介</h2>
 		<h2 class="nobold ft24 point func-content" onclick="location.href = '/news'">年级新闻</h2>
-		<h2 class="nobold ft24 point func-content" onclick="location.href = '/forum'">论坛</h2>
+		<h2 class="underline ft24 point func-content" onclick="location.href = '/forum'">论坛</h2>
 		<h2 class="nobold ft24 point func-content" onclick="location.href = '/tools'">小工具</h2>
 		<h2 class="nobold ft24 point func-content" onclick="location.href = '/login'">注册/登录</h2>
 	</div>
@@ -26,9 +32,9 @@
 		<img src="//kevinwu521.gitee.io/res/zizhihui.jpeg" id="title-ico-img" align="top" alt="自治会">
 		<div id="title-ico"><h1 id="title-h1">北京师大附中2022学生自治会&emsp;&emsp;</h1></div>
 		<div id="functions">
-			&emsp;<h2 class="underline inl ft24 point" onclick="location.href = '/'">年级简介</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/'">年级简介</h2>
 			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/news'">年级新闻</h2>
-			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/forum'">论坛</h2>
+			&emsp;<h2 class="underline inl ft24 point" onclick="location.href = '/forum'">论坛</h2>
 			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/tools'">小工具</h2>
 		</div>
 		<span id="title-right">
@@ -41,8 +47,22 @@
     <div id="main-content">
 		<div id="cont-white">
 			<h2>发布论坛</h2>
-			<input id="title" placeholder="请输入论坛标题"><br>
-			<p id="txt-count">0/1024</p>
+			<div id="title-div">
+				<input id="title" placeholder="请输入论坛标题">
+				<p id="txt-count">0/1024</p>
+			</div>
+			<div id="edit">
+				<div id="option">
+					<p id="editContent" onclick="edit()" class="underline bold">编辑正文</p>
+					&emsp;
+					<p id="previewContent" onclick="preview()">预览</p>
+				</div>
+				<div id="content-div">
+					<textarea id="content" placeholder="请输入论坛正文"></textarea>
+					<p id="content-count">0/1024</p>
+				</div>
+				<div id="preview-div"></div>
+			</div>
 			<br><br>
 			<button class="blue" type="button" onclick="submit()">提&emsp;交</button>
 		</div>
@@ -52,7 +72,6 @@
 			<h3>友情链接</h3>
 			<a href="http://bjsdfz5ban.top" class="black">5班官网</a>
 			<a href="https://jiziqian.github.io/bjsdfz18ban" class="black">18班官网</a>
-		</div><br>
 		<div class="bottom-bar-content">
 			<h3>联系邮箱</h3>
 			<p>bjsdfz22@outlook.com</p>
