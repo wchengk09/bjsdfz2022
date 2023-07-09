@@ -40,9 +40,8 @@ addrows();
 function submit(){
     var ajax = new XMLHttpRequest();
     ajax.onload = function(){
-        alert(ajax.responseText);
-        if (ajax.responseText == '成功！')
-            location.href = '/forum/';
+        alert('OKK');
+        location.href = '/forum/';
     }
     ajax.open('POST',getIP(17668) + '/forum/insert');
     ajax.send(queryString({
@@ -63,6 +62,7 @@ function preview(){
     getObj('editContent').className="";
     getObj('content-div').style="display: none;";
     getObj('preview-div').style="";
+    showdown.setFlavor('github');
     var converter=new showdown.Converter({parseImgDimensions: true, simplifiedAutoLink: true, strikethrough: true, tables: true, simpleLineBreaks: true, underline: true, moreStyling: true});
     getObj('preview-div').innerHTML=converter.makeHtml(getObj('content').value);
     renderMathInElement(getObj('preview-div'), {
@@ -75,7 +75,7 @@ function preview(){
         throwOnError : true,
         ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
     });
-    hljs.highlightAll();
+    console.log(hljs.highlight(getObj('preview-div').innerHTML, {}));
 }
 
 async function loadfile(){
@@ -86,10 +86,11 @@ async function loadfile(){
             fr.readAsDataURL(files[i]);
             await new Promise(function(res){
                 fr.onloadend=function(e){
-                    if(sizesum+files[i].size>1048576){
-                        alert("您上传的文件总大小已超过1MB，请停止上传");
+                    if(sizesum+files[i].size>10485760){
+                        alert("您上传的文件总大小已超过10MB，请停止上传");
                     }
                     else{
+                        sizesum+=files[i].size;
                         base64[base64.length]=e.target.result;
                         getObj('file-titles').innerHTML+='<button id=\"'+(base64.length-1)+'\" class=\"upload-file-buttons white-button\">'+files[i].name+'<i class="fa fa-times" onclick=\"delfile('+(base64.length-1)+')\"></i>'+'</button>';
                     }

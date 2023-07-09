@@ -1,0 +1,20 @@
+div.content-container{
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.content-text{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    position: relative;
+}
+
+.content-right{
+    position: absolute;
+    right: 20px;
+}
