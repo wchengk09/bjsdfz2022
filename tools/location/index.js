@@ -9,7 +9,7 @@ function dispLocation(p){
     getObj('wei').innerHTML = p.coords.latitude;
     getObj('jing').innerHTML = p.coords.longitude;
     getObj('haiba').innerHTML = p.coords.altitude;
-    setTimeout(getJingWei,0);
+    setTimeout(getJingWei,1000);
 }
 
 function err(){
