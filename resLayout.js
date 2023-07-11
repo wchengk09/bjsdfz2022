@@ -41,3 +41,10 @@ function changeContent(){
         hideContent();
     else showContent();
 }
+
+function setBottomBar(){
+    getObj('bottom-bar').style.top = (Math.max(window.innerHeight - getObj('bottom-bar').offsetHeight,document.body.clientHeight + 20) ) + 'px';
+}
+
+window.addEventListener('load',setBottomBar);
+window.addEventListener('resize',setBottomBar);

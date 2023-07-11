@@ -34,6 +34,9 @@ div.index-block-out{
 }
 
 div#bottom-bar{
+    position: absolute;
+    left: 0;
+    right: 0;
     padding: 10px;
     background-color: rgb(236,236,236);
 }
