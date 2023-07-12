@@ -6,7 +6,12 @@ function degToRad(x){
 
 function convert(x,y){
     var ret = new Object();
-    var 
+    ret.z = R * Math.sin(x);
+    var r = R * Math.cos(x);
+    ret.x = r * Math.sin(y);
+    ret.y = r * Math.cos(y);
+    console.log(ret);
+    return ret;
 }
 
 function getDis(x1,y1,x2,y2){
@@ -14,8 +19,12 @@ function getDis(x1,y1,x2,y2){
     x2 = degToRad(x2);
     y1 = degToRad(y1);
     y2 = degToRad(y2);
-
-    var dx = x2 - x1;
-    var dy = y2 - y1;
-
+    var p1 = convert(x1,y1);
+    var p2 = convert(x2,y2);
+    var dx = p2.x - p1.x;
+    var dy = p2.y - p1.y;
+    var dz = p2.z - p1.z;
+    var dis_line = Math.sqrt(dx * dx + dy * dy + dz * dz);
+    var ang = 2 * Math.asin(dis_line / 2 / R);
+    return ang * R;
 }

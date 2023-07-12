@@ -93,11 +93,6 @@ button{
     cursor: pointer;
 }
 
-
-#main-content{
-    min-height: 100vh;
-}
-
 .white-button{
     background-color: #fff;
     border-radius: 6px;

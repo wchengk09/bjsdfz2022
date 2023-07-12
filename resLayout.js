@@ -48,3 +48,4 @@ function setBottomBar(){
 
 window.addEventListener('load',setBottomBar);
 window.addEventListener('resize',setBottomBar);
+window.addEventListener('DOMSubtreeModified',setBottomBar);
