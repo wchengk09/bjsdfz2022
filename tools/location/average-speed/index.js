@@ -1,12 +1,12 @@
 function getChange(){
     var idx = getObj('mode').selectedIndex;
     if (idx == 0)location.href = '../';
-    if (idx == 2)location.href = '../average-speed';
+    if (idx == 1)location.href = '../speed';
     if (idx == 3)location.href = '../distance';
 }
 
 var prev_wei,prev_jing;
-var prev_tm;
+var prev_time;
 
 function dispLocation(p){
     var wei = p.coords.latitude;
@@ -19,7 +19,6 @@ function dispLocation(p){
     }
     prev_wei = wei;
     prev_jing = jing;
-    prev_tm = tm;
     setTimeout(getJingWei,1000);
 }
 

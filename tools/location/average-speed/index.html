@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测速 | 经纬仪 | 北京师大附中2022级学生自治会</title>
+	<meta name="keywords" content="北京师大附中,北京师范大学附属中学,2022,学生,自治会">
+	<meta name="description" content="">
+	<script src="/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="/index.css">
+	<script src="/common.js"></script>
+    <script defer src="/init.js"></script>
+	<script defer src="index.js"></script>
+	<script src="/resLayout.js"></script>
+    <script src="../distance.js"></script>
+</head>
+<body>
+	<div id="functions-content">
+		<h2 class="underline ft24 point func-content" onclick="location.href = '/'">年级简介</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/news'">年级新闻</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/forum'">论坛</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/tools'">小工具</h2>
+		<h2 class="nobold ft24 point func-content" onclick="location.href = '/login'">注册/登录</h2>
+	</div>
+	<div id="half-dark" onclick="hideContent()"></div>
+	<div id="title-bar">
+		<img src="//kevinwu521.gitee.io/res/zizhihui.jpeg" id="title-ico-img" align="top" alt="自治会">
+		<div id="title-ico"><h1 id="title-h1">测定平均速度 | 北京师大附中2022学生自治会&emsp;&emsp;</h1></div>
+		<div id="functions">
+			&emsp;<h2 class="underline inl ft24 point" onclick="location.href = '/'">年级简介</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/news'">年级新闻</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/forum'">论坛</h2>
+			&emsp;<h2 class="nobold inl ft24 point" onclick="location.href = '/tools'">小工具</h2>
+		</div>
+		<span id="title-right">
+			<a class="a-text title-login" href="/login" id="login-a">注册/登录</a>
+			<img class="point" src="//kevinwu521.gitee.io/res/menu.png" id="title-menu" onclick="changeContent();" alt="菜单">
+		</span>
+	</div>
+	<div class="back-fz0"></div>
+	<div class="shadow"></div>
+	<div id="main-content">
+		<div id="cont-white">
+			<h2>经纬仪</h2>
+			<select id="mode" onchange="getChange()">
+				<option>测定经纬度和海拔</option>
+				<option>测速</option>
+				<option selected>测定平均速度</option>
+				<option>经纬度求距离</option>
+			</select>
+			<center>
+				<div>
+					<p>
+					<span>平均速度(km/h)：</span>
+						<b id="speed-km-h"></b>
+					</p>
+					<p>
+						<span>平均速度(m/s)：</span>
+						<b id="speed-m-s"></b>
+					</p>
+				</div>
+			</center>
+		</div>
+	</div>
+	<div id="bottom-bar">
+		<div class="bottom-bar-content">
+			<h3>友情链接</h3>
+			<a href="http://bjsdfz5ban.top" class="black">5班官网</a>
+			<a href="https://jiziqian.github.io/bjsdfz18ban" class="black">18班官网</a>
+		</div><br>
+		<div class="bottom-bar-content">
+			<h3>联系邮箱</h3>
+			<p>bjsdfz22@outlook.com</p>
+		</div>
+	</div>
+</body>
+</html>

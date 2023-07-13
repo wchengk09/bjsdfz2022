@@ -2,7 +2,7 @@ function getChange(){
     var idx = getObj('mode').selectedIndex;
     if (idx == 0)location.href = '../';
     if (idx == 2)location.href = '../average-speed';
-    if (idx == 3)location.href = '../distance';
+    if (idx == 1)location.href = '../speed';
 }
 
 var prev_wei,prev_jing;
