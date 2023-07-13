@@ -15,11 +15,11 @@ function dispLocation(p){
     if (prev_wei !== undefined && prev_jing != undefined){
         var speed_ms = getDis(wei,jing,prev_wei,prev_jing) / (tm - prev_time);
         getObj('speed-m-s').innerHTML = speed_ms * 1000000;
-        getObj('speed-km-h').innerHTML = speed_ms * 3600000;
-        prev_wei = wei;
-        prev_jing = jing;
-        prev_tm = tm;
+        getObj('speed-km-h').innerHTML = speed_ms * 3600000;    
     }
+    prev_wei = wei;
+    prev_jing = jing;
+    prev_tm = tm;
     setTimeout(getJingWei,1000);
 }
 
